@@ -21,7 +21,7 @@ def monkey_trouble(a_smile, b_smile):
     monkey_trouble(True, False) → False
     """
     return a_smile == b_smile
-     
+
 def sum_double(a, b):
     """
     Given two int values, return their sum. Unless the two values are the same,
@@ -31,8 +31,9 @@ def sum_double(a, b):
     sum_double(3, 2) → 5
     sum_double(2, 2) → 8
     """
-    return
-
+    if a == b:
+        return 2*(a+b)
+    return (a+b)
 
 def diff21(n):
     """
