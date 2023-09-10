@@ -79,7 +79,7 @@ def near_hundred(n):
     near_hundred(90) → True
     near_hundred(89) → False
     """
-    return
+    return 90 <= n <= 110 or 190 <= n <= 210
 
 
 def pos_neg(a, b, negative):
