@@ -101,7 +101,9 @@ def not_string(str):
     not_string('x') → 'not x'
     not_string('not bad') → 'not bad'
     """
-    return
+    if str[0:3] == 'not':
+       return str 
+    return 'not ' + str
 
 
 def missing_char(str, n):
