@@ -90,7 +90,7 @@ def pos_neg(a, b, negative):
     pos_neg(-1, 1, False) → True
     pos_neg(-4, -5, True) → True
     """
-    return
+    return (a > 0 and b <0 and not negative) or (b>0 and a<0 and not negative) or (a<0 and b<0 and negative)
 
 
 def not_string(str):
