@@ -44,8 +44,9 @@ def diff21(n):
     diff21(10) → 11
     diff21(21) → 0
     """
-    return
-
+    if n > 21:
+        return 2 * abs(n-21)
+    return abs (n-21)
 
 def parrot_trouble(talking, hour):
     """
