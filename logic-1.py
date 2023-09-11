@@ -158,7 +158,7 @@ def near_ten(num):
     near_ten(12) → True
     near_ten(17) → False
     near_ten(19) → True"""
-    return
+    return (num +2) % 10 <= 4
 
 
 if __name__ == "__main__":
