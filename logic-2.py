@@ -138,7 +138,13 @@ def make_chocolate(small, big, goal):
     make_chocolate(4, 1, 10) → -1
     make_chocolate(4, 1, 7) → 2
     """
-    return
+    if goal >= 5*big:
+        need = goal - (5*big)
+    else:
+        need = goal % 5
+    if need <= small:
+        return need
+    return -1
 
 
 if __name__ == "__main__":
