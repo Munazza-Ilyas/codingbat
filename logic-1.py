@@ -89,7 +89,7 @@ def sorta_sum(a, b):
     sorta_sum(3, 4) → 7
     sorta_sum(9, 4) → 20
     sorta_sum(10, 11) → 21"""
-    return
+    return (a+b) if not 10 <= (a+b) <= 19 else 20
 
 
 def alarm_clock(day, vacation):
