@@ -76,7 +76,13 @@ def no_teen_sum(a, b, c):
     no_teen_sum(1, 2, 3) → 6
     no_teen_sum(2, 13, 1) → 3
     no_teen_sum(2, 1, 14) → 3"""
-    return
+    
+    return fix_teen(a) +fix_teen(b) + fix_teen(c)
+
+def fix_teen(n):
+        if 13<=n<=19 and n!=15 and n!=16:
+            return 0
+        return n
 
 
 def round_sum(a, b, c):
