@@ -98,7 +98,13 @@ def round_sum(a, b, c):
     round_sum(12, 13, 14) → 30
     round_sum(6, 4, 4) → 10
     """
-    return
+    return fix_round(a) + fix_round(b) + fix_round(c)
+
+def fix_round(i):
+    if i%10 >= 5:
+        return i + (10-(i%10))
+    return i - (i%10)
+
 
 
 def close_far(a, b, c):
