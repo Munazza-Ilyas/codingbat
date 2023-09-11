@@ -29,7 +29,12 @@ def date_fashion(you, date):
     date_fashion(5, 2) → 0
     date_fashion(5, 5) → 1
     """
-    return
+    if you <= 2 or date <= 2:
+        return 0
+    elif you>=8 or date >= 8:
+        return 2   
+
+    return 1
 
 
 def squirrel_play(temp, is_summer):
