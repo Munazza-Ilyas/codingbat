@@ -12,8 +12,12 @@ def make_bricks(small, big, goal):
     make_bricks(3, 1, 9) → False
     make_bricks(3, 2, 10) → True
     """
-    return
-
+    if (small + 5*big) < goal:
+        return False
+    elif (goal % 5) > small:
+        return False
+    else:
+        return True
 
 def lone_sum(a, b, c):
     """
