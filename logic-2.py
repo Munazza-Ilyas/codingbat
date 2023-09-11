@@ -30,7 +30,15 @@ def lone_sum(a, b, c):
     lone_sum(3, 2, 3) → 2
     lone_sum(3, 3, 3) → 0
     """
-    return
+    if a==b==c:
+        return 0
+    elif a==b:
+        return c
+    elif a==c:
+        return b
+    elif b==c:
+        return a
+    return a+b+c
 
 
 def lucky_sum(a, b, c):
