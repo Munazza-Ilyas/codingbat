@@ -8,8 +8,7 @@ def sleep_in(weekday, vacation):
     sleep_in(True, False) → False
     sleep_in(False, True) → True
     """
-    return
-
+    return not weekday or vacation
 
 def monkey_trouble(a_smile, b_smile):
     """
@@ -21,8 +20,7 @@ def monkey_trouble(a_smile, b_smile):
     monkey_trouble(False, False) → True
     monkey_trouble(True, False) → False
     """
-    return
-
+    return a_smile == b_smile
 
 def sum_double(a, b):
     """
@@ -33,8 +31,9 @@ def sum_double(a, b):
     sum_double(3, 2) → 5
     sum_double(2, 2) → 8
     """
-    return
-
+    if a == b:
+        return 2*(a+b)
+    return (a+b)
 
 def diff21(n):
     """
@@ -45,8 +44,9 @@ def diff21(n):
     diff21(10) → 11
     diff21(21) → 0
     """
-    return
-
+    if n > 21:
+        return 2 * abs(n-21)
+    return abs (n-21)
 
 def parrot_trouble(talking, hour):
     """
@@ -58,8 +58,7 @@ def parrot_trouble(talking, hour):
     parrot_trouble(True, 7) → False
     parrot_trouble(False, 6) → False
     """
-    return
-
+    return talking and (hour > 20 or hour < 7)
 
 def makes10(a, b):
     """
@@ -69,7 +68,7 @@ def makes10(a, b):
     makes10(9, 9) → False
     makes10(1, 9) → True
     """
-    return
+    return a == 10 or b == 10 or (a+b ==10)
 
 
 def near_hundred(n):
@@ -80,7 +79,7 @@ def near_hundred(n):
     near_hundred(90) → True
     near_hundred(89) → False
     """
-    return
+    return 90 <= n <= 110 or 190 <= n <= 210
 
 
 def pos_neg(a, b, negative):
@@ -91,7 +90,7 @@ def pos_neg(a, b, negative):
     pos_neg(-1, 1, False) → True
     pos_neg(-4, -5, True) → True
     """
-    return
+    return (a > 0 and b <0 and not negative) or (b>0 and a<0 and not negative) or (a<0 and b<0 and negative)
 
 
 def not_string(str):
@@ -102,7 +101,9 @@ def not_string(str):
     not_string('x') → 'not x'
     not_string('not bad') → 'not bad'
     """
-    return
+    if str[0:3] == 'not':
+       return str 
+    return 'not ' + str
 
 
 def missing_char(str, n):
@@ -113,7 +114,7 @@ def missing_char(str, n):
     missing_char('kitten', 0) → 'itten'
     missing_char('kitten', 4) → 'kittn'
     """
-    return
+    return str.replace(str[n],"")
 
 
 def front_back(str):
@@ -124,8 +125,11 @@ def front_back(str):
     front_back('a') → 'a'
     front_back('ab') → 'ba'
     """
-    return
-
+    if len(str) < 2:
+        return str
+    else:
+        return str[-1] + str[1:-1] + str[0]
+    
 
 def front3(str):
     """
@@ -135,7 +139,7 @@ def front3(str):
     front3('Chocolate') → 'ChoChoCho'
     front3('abc') → 'abcabcabc'
     """
-    return
+    return 3*str[0:3]
 
 
 if __name__ == "__main__":
