@@ -12,8 +12,12 @@ def make_bricks(small, big, goal):
     make_bricks(3, 1, 9) → False
     make_bricks(3, 2, 10) → True
     """
-    return
-
+    if (small + 5*big) < goal:
+        return False
+    elif (goal % 5) > small:
+        return False
+    else:
+        return True
 
 def lone_sum(a, b, c):
     """
@@ -26,7 +30,15 @@ def lone_sum(a, b, c):
     lone_sum(3, 2, 3) → 2
     lone_sum(3, 3, 3) → 0
     """
-    return
+    if a==b==c:
+        return 0
+    elif a==b:
+        return c
+    elif a==c:
+        return b
+    elif b==c:
+        return a
+    return a+b+c
 
 
 def lucky_sum(a, b, c):
@@ -40,7 +52,15 @@ def lucky_sum(a, b, c):
     lucky_sum(1, 2, 13) → 3
     lucky_sum(1, 13, 3) → 1
     """
-    return
+    
+    if a==13:
+        return 0
+    elif b==13:
+        return a
+    elif c==13:
+        return a+b
+    return a+b+c
+    
 
 
 def no_teen_sum(a, b, c):
@@ -56,7 +76,13 @@ def no_teen_sum(a, b, c):
     no_teen_sum(1, 2, 3) → 6
     no_teen_sum(2, 13, 1) → 3
     no_teen_sum(2, 1, 14) → 3"""
-    return
+    
+    return fix_teen(a) +fix_teen(b) + fix_teen(c)
+
+def fix_teen(n):
+        if 13<=n<=19 and n!=15 and n!=16:
+            return 0
+        return n
 
 
 def round_sum(a, b, c):
@@ -72,7 +98,13 @@ def round_sum(a, b, c):
     round_sum(12, 13, 14) → 30
     round_sum(6, 4, 4) → 10
     """
-    return
+    return fix_round(a) + fix_round(b) + fix_round(c)
+
+def fix_round(i):
+    if i%10 >= 5:
+        return i + (10-(i%10))
+    return i - (i%10)
+
 
 
 def close_far(a, b, c):
@@ -86,7 +118,12 @@ def close_far(a, b, c):
     close_far(1, 2, 10) → True
     close_far(1, 2, 3) → False
     close_far(4, 1, 3) → True"""
-    return
+    
+    return (check_close(a,b) and check_far(a,b,c)) or (check_close(a,c) and check_far(a,c,b))
+def check_close(x,y):
+    return abs(x-y)<=1
+def check_far(x,y,z):
+    return abs(x-z) >= 2 and abs(y-z)>=2
 
 
 def make_chocolate(small, big, goal):
@@ -101,7 +138,13 @@ def make_chocolate(small, big, goal):
     make_chocolate(4, 1, 10) → -1
     make_chocolate(4, 1, 7) → 2
     """
-    return
+    if goal >= 5*big:
+        need = goal - (5*big)
+    else:
+        need = goal % 5
+    if need <= small:
+        return need
+    return -1
 
 
 if __name__ == "__main__":
