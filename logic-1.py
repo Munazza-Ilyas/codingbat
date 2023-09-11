@@ -127,7 +127,7 @@ def love6(a, b):
     love6(6, 4) → True
     love6(4, 5) → False
     love6(1, 5) → True"""
-    return
+    return a == 6 or b == 6 or abs(a-b)==6 or (a+b)==6
 
 
 def in1to10(n, outside_mode):
