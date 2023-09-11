@@ -125,7 +125,11 @@ def front_back(str):
     front_back('a') → 'a'
     front_back('ab') → 'ba'
     """
-    return
+    if len(str) < 2:
+        return str
+    else:
+        return str[-1] + str[1:-1] + str[0]
+    
 
 def front3(str):
     """
