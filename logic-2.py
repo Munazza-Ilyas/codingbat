@@ -118,7 +118,12 @@ def close_far(a, b, c):
     close_far(1, 2, 10) → True
     close_far(1, 2, 3) → False
     close_far(4, 1, 3) → True"""
-    return
+    
+    return (check_close(a,b) and check_far(a,b,c)) or (check_close(a,c) and check_far(a,c,b))
+def check_close(x,y):
+    return abs(x-y)<=1
+def check_far(x,y,z):
+    return abs(x-z) >= 2 and abs(y-z)>=2
 
 
 def make_chocolate(small, big, goal):
