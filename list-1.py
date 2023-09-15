@@ -27,7 +27,7 @@ def make_pi():
 
 
     make_pi() → [3, 1, 4]"""
-    return
+    return [3,1,4]
 
 
 def common_end(arr1, arr2):
