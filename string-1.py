@@ -118,7 +118,7 @@ def combo_string(str1, str2):
     combo_string('aaa', 'b') → 'baaab'
 
     """
-    return
+    return str2 + str1 + str2 if len(str1) > len(str2) else str1 + str2 + str1
 
 
 def non_start(str1, str2):
