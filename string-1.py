@@ -74,7 +74,9 @@ def first_two(str):
     first_two('abcdefg') → 'ab'
     first_two('ab') → 'ab'
     """
-    return
+    if len(str)>=2:
+        return str[0:2]
+    return str
 
 
 def first_half(str):
