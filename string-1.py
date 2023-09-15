@@ -133,7 +133,7 @@ def non_start(str1, str2):
     non_start('shotl', 'java') → 'hotlava'
 
     """
-    return
+    return str1[1:] + str2[1:]
 
 
 def left2(str):
