@@ -46,7 +46,7 @@ def make_out_word(out, word):
     make_out_word('<<>>', 'WooHoo') → '<<WooHoo>>'
     make_out_word('[[]]', 'word') → '[[word]]'
     """
-    return
+    return out[:2] + word + out[2:]
 
 
 def extra_end(str):
