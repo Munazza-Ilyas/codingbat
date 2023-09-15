@@ -89,7 +89,8 @@ def first_half(str):
     first_half('HelloThere') → 'Hello'
     first_half('abcdef') → 'abc'
     """
-    return
+    n = len(str)//2
+    return str[:n]
 
 
 def without_end(str):
