@@ -7,7 +7,7 @@ def hello_name(str):
     hello_name('Alice') → 'Hello Alice!'
     hello_name('X') → 'Hello X!'
     """
-    return
+    return "Hello "+str+"!"
 
 
 def make_abba(str1, str2):
