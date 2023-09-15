@@ -6,7 +6,7 @@ def first_last6(nums):
     first_last6([1, 2, 6]) → True
     first_last6([6, 1, 2, 3]) → True
     first_last6([13, 6, 1, 2, 3]) → False"""
-    return
+    return 6 in [nums[0],nums[-1]]
 
 
 def same_first_last(nums):
