@@ -60,7 +60,7 @@ def extra_end(str):
     extra_end('Hi') → 'HiHiHi'
 
     """
-    return
+    return 3*str[-2:]
 
 
 def first_two(str):
