@@ -147,7 +147,7 @@ def left2(str):
     left2('java') → 'vaja'
     left2('Hi') → 'Hi'
     """
-    return
+    return str[2:] + str[:2]
 
 
 if __name__ == "__main__":
