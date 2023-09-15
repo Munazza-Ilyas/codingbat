@@ -19,7 +19,7 @@ def make_abba(str1, str2):
     make_abba('Yo', 'Alice') → 'YoAliceAliceYo'
     make_abba('What', 'Up') → 'WhatUpUpWhat'
     """
-    return
+    return str1 + 2*str2 + str1
 
 
 def make_tags(tag, word):
