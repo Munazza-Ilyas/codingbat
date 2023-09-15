@@ -50,7 +50,7 @@ def sum3(nums):
     sum3([1, 2, 3]) → 6
     sum3([5, 11, 2]) → 18
     sum3([7, 0, 0]) → 7"""
-    return
+    return sum(nums)
 
 
 def rotate_left3(nums):
