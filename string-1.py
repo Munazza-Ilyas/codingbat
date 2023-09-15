@@ -103,7 +103,7 @@ def without_end(str):
     without_end('java') → 'av'
     without_end('coding') → 'odin'
     """
-    return
+    return str[1:-1]
 
 
 def combo_string(str1, str2):
