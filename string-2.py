@@ -82,7 +82,7 @@ def xyz_there(str):
     xyz_there('abcxyz') → True
     xyz_there('abc.xyz') → False
     xyz_there('xyz.abc') → True"""
-    return
+    return str.count("xyz") != str.count(".xyz")
 
 
 if __name__ == "__main__":
