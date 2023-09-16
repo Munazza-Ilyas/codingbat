@@ -74,7 +74,17 @@ def sum67(nums):
     sum67([1, 2, 2]) → 5
     sum67([1, 2, 2, 6, 99, 99, 7]) → 5
     sum67([1, 1, 6, 7, 2]) → 4"""
-    return
+    
+    sum = 0
+    i = 0
+    while i < len(nums):
+        if nums[i]==6:
+            while(nums[i] != 7):
+                i += 1
+        else:
+            sum +=nums[i]
+        i += 1
+    return sum
 
 
 def has22(nums):
