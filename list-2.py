@@ -54,8 +54,15 @@ def sum13(nums):
     sum13([1, 2, 2, 1]) → 6
     sum13([1, 1]) → 2
     sum13([1, 2, 2, 1, 13]) → 6"""
-    return
-
+    
+    if len(nums) == 0:
+        return 0
+    for i in range(len(nums)):
+        if nums[i] == 13:
+            nums[i] = 0
+            if i+1 < len(nums):
+                nums[i+1] = 0
+    return sum(nums)
 
 def sum67(nums):
     """
