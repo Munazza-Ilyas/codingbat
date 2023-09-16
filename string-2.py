@@ -44,7 +44,12 @@ def count_code(str):
     count_code('aaacodebbb') → 1
     count_code('codexxcode') → 2
     count_code('cozexxcope') → 2"""
-    return
+    
+    count = 0
+    for i in range(len(str)-3):
+        if str[i:i+2] + str[i+3] == "coe" :
+            count += 1
+    return count
 
 
 def end_other(str1, str2):
