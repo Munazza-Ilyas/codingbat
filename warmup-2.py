@@ -27,7 +27,7 @@ def string_bits(str):
     string_bits('Hello') → 'Hlo'
     string_bits('Hi') → 'H'
     string_bits('Heeololeo') → 'Hello'"""
-    return
+    return str[::2]
 
 
 def string_splosion(str):
