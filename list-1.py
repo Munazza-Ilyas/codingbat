@@ -98,7 +98,7 @@ def sum2(nums):
     sum2([1, 2, 3]) → 3
     sum2([1, 1]) → 2
     sum2([1, 1, 1, 1]) → 2"""
-    return
+    return sum(nums[:2])
 
 
 def middle_way(arr1, arr2):
