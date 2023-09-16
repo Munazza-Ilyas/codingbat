@@ -9,7 +9,11 @@ def count_evens(nums):
     count_evens([2, 2, 0]) → 3
     count_evens([1, 3, 5]) → 0
     """
-    return
+    even = 0
+    for i in nums:
+        if i%2 == 0:
+            even += 1
+    return even
 
 
 def big_diff(nums):
