@@ -37,8 +37,12 @@ def string_splosion(str):
     string_splosion('Code') → 'CCoCodCode'
     string_splosion('abc') → 'aababc'
     string_splosion('ab') → 'aab'"""
-    return
-
+    
+    new_str = ""
+    for i in range(1,len(str)+1):
+        new_str= new_str + str[:i]
+    return new_str
+    
 
 def last2(str):
     """
