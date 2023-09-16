@@ -9,7 +9,11 @@ def count_evens(nums):
     count_evens([2, 2, 0]) → 3
     count_evens([1, 3, 5]) → 0
     """
-    return
+    even = 0
+    for i in nums:
+        if i%2 == 0:
+            even += 1
+    return even
 
 
 def big_diff(nums):
@@ -21,7 +25,7 @@ def big_diff(nums):
     big_diff([10, 3, 5, 6]) → 7
     big_diff([7, 2, 10, 9]) → 8
     big_diff([2, 10, 7, 2]) → 8"""
-    return
+    return max(nums) - min(nums)
 
 
 def centered_average(nums):
@@ -36,7 +40,9 @@ def centered_average(nums):
     centered_average([1, 2, 3, 4, 100]) → 3
     centered_average([1, 1, 5, 5, 10, 8, 7]) → 5
     centered_average([-10, -4, -2, -4, -2, 0]) → -3"""
-    return
+    
+    nums.sort()
+    return sum(nums[1:-1]) // (len(nums)-2)
 
 
 def sum13(nums):
@@ -48,8 +54,15 @@ def sum13(nums):
     sum13([1, 2, 2, 1]) → 6
     sum13([1, 1]) → 2
     sum13([1, 2, 2, 1, 13]) → 6"""
-    return
-
+    
+    if len(nums) == 0:
+        return 0
+    for i in range(len(nums)):
+        if nums[i] == 13:
+            nums[i] = 0
+            if i+1 < len(nums):
+                nums[i+1] = 0
+    return sum(nums)
 
 def sum67(nums):
     """
@@ -61,7 +74,17 @@ def sum67(nums):
     sum67([1, 2, 2]) → 5
     sum67([1, 2, 2, 6, 99, 99, 7]) → 5
     sum67([1, 1, 6, 7, 2]) → 4"""
-    return
+    
+    sum = 0
+    i = 0
+    while i < len(nums):
+        if nums[i]==6:
+            while(nums[i] != 7):
+                i += 1
+        else:
+            sum +=nums[i]
+        i += 1
+    return sum
 
 
 def has22(nums):
@@ -72,7 +95,13 @@ def has22(nums):
     has22([1, 2, 2]) → True
     has22([1, 2, 1, 2]) → False
     has22([2, 1, 2]) → False"""
-    return
+    
+    for i in range(len(nums)-1):
+        if nums[i] ==2:
+            if (nums[i+1] == 2):
+                return True
+    return False
+
 
 
 if __name__ == "__main__":
