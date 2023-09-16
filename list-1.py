@@ -133,7 +133,7 @@ def has23(nums):
     has23([4, 3]) → True
     has23([4, 5]) → False
     """
-    return
+    return 2 in nums or 3 in nums
 
 
 if __name__ == "__main__":
