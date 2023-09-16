@@ -6,7 +6,7 @@ def string_times(str, n):
     string_times('Hi', 3) → 'HiHiHi'
     string_times('Hi', 1) → 'Hi'
     """
-    return
+    return n*str
 
 
 def front_times(str, n):
