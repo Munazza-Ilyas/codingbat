@@ -51,7 +51,11 @@ def last2(str):
     last2('hixxhi') → 1
     last2('xaxxaxaxx') → 1
     last2('axxxaaxx') → 2"""
-    return
+    count = 0 
+    for i in range(0,len(str)-2):
+        if str[i:i+2] == str[-2:]:
+            count += 1
+    return count 
 
 
 def array_count9(nums):
