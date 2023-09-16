@@ -6,7 +6,7 @@ def string_times(str, n):
     string_times('Hi', 3) → 'HiHiHi'
     string_times('Hi', 1) → 'Hi'
     """
-    return
+    return n*str
 
 
 def front_times(str, n):
@@ -17,7 +17,7 @@ def front_times(str, n):
     front_times('Chocolate', 3) → 'ChoChoCho'
     front_times('Abc', 3) → 'AbcAbcAbc'
     """
-    return
+    return n*str[:3] if len(str) >= 3 else n*str
 
 
 def string_bits(str):
@@ -27,7 +27,7 @@ def string_bits(str):
     string_bits('Hello') → 'Hlo'
     string_bits('Hi') → 'H'
     string_bits('Heeololeo') → 'Hello'"""
-    return
+    return str[::2]
 
 
 def string_splosion(str):
@@ -37,8 +37,12 @@ def string_splosion(str):
     string_splosion('Code') → 'CCoCodCode'
     string_splosion('abc') → 'aababc'
     string_splosion('ab') → 'aab'"""
-    return
-
+    
+    new_str = ""
+    for i in range(1,len(str)+1):
+        new_str= new_str + str[:i]
+    return new_str
+    
 
 def last2(str):
     """
@@ -47,7 +51,11 @@ def last2(str):
     last2('hixxhi') → 1
     last2('xaxxaxaxx') → 1
     last2('axxxaaxx') → 2"""
-    return
+    count = 0 
+    for i in range(0,len(str)-2):
+        if str[i:i+2] == str[-2:]:
+            count += 1
+    return count 
 
 
 def array_count9(nums):
@@ -58,7 +66,7 @@ def array_count9(nums):
     array_count9([1, 9, 9]) → 2
     array_count9([1, 9, 9, 3, 9]) → 3
     """
-    return
+    return nums.count(9)
 
 
 def array_front9(nums):
@@ -69,7 +77,7 @@ def array_front9(nums):
     array_front9([1, 2, 3, 4, 9]) → False
     array_front9([1, 2, 3, 4, 5]) → False
     """
-    return
+    return nums[:4].count(9)>0
 
 
 def array123(nums):
@@ -81,7 +89,11 @@ def array123(nums):
     array123([1, 1, 2, 4, 1]) → False
     array123([1, 1, 2, 1, 2, 3]) → True
     """
-    return
+    
+    for i in range(0, len(nums)+1):
+        if [1,2,3] == nums[i:i+3]:
+            return True
+    return False
 
 
 def string_match(str1, str2):
@@ -94,7 +106,11 @@ def string_match(str1, str2):
     string_match('abc', 'abc') → 2
     string_match('abc', 'axc') → 0
     """
-    return
+    match = 0
+    for i in range(min(len(str1), len(str2))-1):
+        if str1[i]==str2[i] and str1[i+1]==str2[i+1]:
+            match += 1
+    return match
 
 
 if __name__ == "__main__":
