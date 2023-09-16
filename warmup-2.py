@@ -77,7 +77,7 @@ def array_front9(nums):
     array_front9([1, 2, 3, 4, 9]) → False
     array_front9([1, 2, 3, 4, 5]) → False
     """
-    return
+    return nums[:4].count(9)>0
 
 
 def array123(nums):
