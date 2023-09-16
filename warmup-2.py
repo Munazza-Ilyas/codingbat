@@ -89,7 +89,11 @@ def array123(nums):
     array123([1, 1, 2, 4, 1]) → False
     array123([1, 1, 2, 1, 2, 3]) → True
     """
-    return
+    
+    for i in range(0, len(nums)+1):
+        if [1,2,3] == nums[i:i+3]:
+            return True
+    return False
 
 
 def string_match(str1, str2):
