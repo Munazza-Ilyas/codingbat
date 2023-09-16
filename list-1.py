@@ -6,7 +6,7 @@ def first_last6(nums):
     first_last6([1, 2, 6]) → True
     first_last6([6, 1, 2, 3]) → True
     first_last6([13, 6, 1, 2, 3]) → False"""
-    return
+    return 6 in [nums[0],nums[-1]]
 
 
 def same_first_last(nums):
@@ -18,7 +18,7 @@ def same_first_last(nums):
     same_first_last([1, 2, 3]) → False
     same_first_last([1, 2, 3, 1]) → True
     same_first_last([1, 2, 1]) → True"""
-    return
+    return len(nums) >=1 and nums[0] == nums[-1]
 
 
 def make_pi():
@@ -27,7 +27,7 @@ def make_pi():
 
 
     make_pi() → [3, 1, 4]"""
-    return
+    return [3,1,4]
 
 
 def common_end(arr1, arr2):
@@ -39,7 +39,7 @@ def common_end(arr1, arr2):
     common_end([1, 2, 3], [7, 3]) → True
     common_end([1, 2, 3], [7, 3, 2]) → False
     common_end([1, 2, 3], [1, 3]) → True"""
-    return
+    return arr1[0] == arr2[0] or arr1[-1] == arr2[-1]
 
 
 def sum3(nums):
@@ -50,7 +50,7 @@ def sum3(nums):
     sum3([1, 2, 3]) → 6
     sum3([5, 11, 2]) → 18
     sum3([7, 0, 0]) → 7"""
-    return
+    return sum(nums)
 
 
 def rotate_left3(nums):
@@ -61,7 +61,7 @@ def rotate_left3(nums):
     rotate_left3([1, 2, 3]) → [2, 3, 1]
     rotate_left3([5, 11, 9]) → [11, 9, 5]
     rotate_left3([7, 0, 0]) → [0, 0, 7]"""
-    return
+    return [nums[1], nums[2], nums[0]]
 
 
 def reverse3(nums):
@@ -72,7 +72,7 @@ def reverse3(nums):
     reverse3([1, 2, 3]) → [3, 2, 1]
     reverse3([5, 11, 9]) → [9, 11, 5]
     reverse3([7, 0, 0]) → [0, 0, 7]"""
-    return
+    return [nums[-1], nums[1], nums[0]]
 
 
 def max_end3(nums):
@@ -85,7 +85,7 @@ def max_end3(nums):
     max_end3([1, 2, 3]) → [3, 3, 3]
     max_end3([11, 5, 9]) → [11, 11, 11]
     max_end3([2, 11, 3]) → [3, 3, 3]"""
-    return
+    return [nums[0]]*3 if nums[0] >= nums[-1] else [nums[-1]]*3
 
 
 def sum2(nums):
@@ -98,7 +98,7 @@ def sum2(nums):
     sum2([1, 2, 3]) → 3
     sum2([1, 1]) → 2
     sum2([1, 1, 1, 1]) → 2"""
-    return
+    return sum(nums[:2])
 
 
 def middle_way(arr1, arr2):
@@ -109,7 +109,7 @@ def middle_way(arr1, arr2):
     middle_way([1, 2, 3], [4, 5, 6]) → [2, 5]
     middle_way([7, 7, 7], [3, 8, 0]) → [7, 8]
     middle_way([5, 2, 9], [1, 4, 5]) → [2, 4]"""
-    return
+    return [arr1[1], arr2[1]]
 
 
 def make_ends(nums):
@@ -122,7 +122,7 @@ def make_ends(nums):
     make_ends([1, 2, 3]) → [1, 3]
     make_ends([1, 2, 3, 4]) → [1, 4]
     make_ends([7, 4, 6, 2]) → [7, 2]"""
-    return
+    return [nums[0], nums[-1]]
 
 
 def has23(nums):
@@ -133,7 +133,7 @@ def has23(nums):
     has23([4, 3]) → True
     has23([4, 5]) → False
     """
-    return
+    return 2 in nums or 3 in nums
 
 
 if __name__ == "__main__":
