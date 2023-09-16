@@ -95,7 +95,13 @@ def has22(nums):
     has22([1, 2, 2]) → True
     has22([1, 2, 1, 2]) → False
     has22([2, 1, 2]) → False"""
-    return
+    
+    for i in range(len(nums)-1):
+        if nums[i] ==2:
+            if (nums[i+1] == 2):
+                return True
+    return False
+
 
 
 if __name__ == "__main__":
