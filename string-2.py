@@ -62,7 +62,13 @@ def end_other(str1, str2):
     end_other('Hiabc', 'abc') → True
     end_other('AbC', 'HiaBc') → True
     end_other('abc', 'abXabc') → True"""
-    return
+    
+    str1_=str1.casefold()
+    str2_=str2.casefold()
+    if str1_.endswith(str2_) or str2_.endswith(str1_):
+        return True
+    return False
+
 
 
 def xyz_there(str):
