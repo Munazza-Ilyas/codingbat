@@ -6,7 +6,11 @@ def double_char(str):
     double_char('The') → 'TThhee'
     double_char('AAbb') → 'AAAAbbbb'
     double_char('Hi-There') → 'HHii--TThheerree'"""
-    return
+    
+    new_str=""
+    for char in str:
+        new_str += 2*char
+    return new_str
 
 
 def count_hi(str):
@@ -17,7 +21,7 @@ def count_hi(str):
     count_hi('abc hi ho') → 1
     count_hi('ABChi hi') → 2
     count_hi('hihi') → 2"""
-    return
+    return str.count("hi")
 
 
 def cat_dog(str):
@@ -28,7 +32,7 @@ def cat_dog(str):
     cat_dog('catdog') → True
     cat_dog('catcat') → False
     cat_dog('1cat1cadodog') → True"""
-    return
+    return str.count("cat") == str.count("dog")
 
 
 def count_code(str):
@@ -40,7 +44,12 @@ def count_code(str):
     count_code('aaacodebbb') → 1
     count_code('codexxcode') → 2
     count_code('cozexxcope') → 2"""
-    return
+    
+    count = 0
+    for i in range(len(str)-3):
+        if str[i:i+2] + str[i+3] == "coe" :
+            count += 1
+    return count
 
 
 def end_other(str1, str2):
@@ -53,7 +62,13 @@ def end_other(str1, str2):
     end_other('Hiabc', 'abc') → True
     end_other('AbC', 'HiaBc') → True
     end_other('abc', 'abXabc') → True"""
-    return
+    
+    str1_=str1.casefold()
+    str2_=str2.casefold()
+    if str1_.endswith(str2_) or str2_.endswith(str1_):
+        return True
+    return False
+
 
 
 def xyz_there(str):
@@ -67,7 +82,7 @@ def xyz_there(str):
     xyz_there('abcxyz') → True
     xyz_there('abc.xyz') → False
     xyz_there('xyz.abc') → True"""
-    return
+    return str.count("xyz") != str.count(".xyz")
 
 
 if __name__ == "__main__":
