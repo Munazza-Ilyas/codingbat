@@ -106,7 +106,11 @@ def string_match(str1, str2):
     string_match('abc', 'abc') → 2
     string_match('abc', 'axc') → 0
     """
-    return
+    match = 0
+    for i in range(min(len(str1), len(str2))-1):
+        if str1[i]==str2[i] and str1[i+1]==str2[i+1]:
+            match += 1
+    return match
 
 
 if __name__ == "__main__":
