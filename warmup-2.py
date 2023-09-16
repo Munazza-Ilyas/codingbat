@@ -17,7 +17,7 @@ def front_times(str, n):
     front_times('Chocolate', 3) → 'ChoChoCho'
     front_times('Abc', 3) → 'AbcAbcAbc'
     """
-    return
+    return n*str[:3] if len(str) >= 3 else n*str
 
 
 def string_bits(str):
