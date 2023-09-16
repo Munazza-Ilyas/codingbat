@@ -66,7 +66,7 @@ def array_count9(nums):
     array_count9([1, 9, 9]) → 2
     array_count9([1, 9, 9, 3, 9]) → 3
     """
-    return
+    return nums.count(9)
 
 
 def array_front9(nums):
